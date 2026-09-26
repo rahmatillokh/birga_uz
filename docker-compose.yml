@@ -1,0 +1,15 @@
+services:
+  yuniqo:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    environment:
+      - API_URL=http://localhost:3000
+    volumes:
+      - yuniqo-data:/app/.data
+    restart: unless-stopped
+
+volumes:
+  yuniqo-data:
