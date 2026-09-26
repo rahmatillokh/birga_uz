@@ -43,6 +43,6 @@ export async function GET(req: Request) {
     premium: tgUsers.filter((u) => u.premium.plan === "premium").length,
     byRegion: Array.from(byRegion.entries()).sort((a, b) => b[1] - a[1]),
     feed,
-    bot: { connected: !!process.env.TELEGRAM_BOT_TOKEN, username: process.env.TELEGRAM_BOT_USERNAME ?? null },
+    bot: { connected: !!process.env.TELEGRAM_BOT_TOKEN, username: process.env.TELEGRAM_BOT_USERNAME || "YuniQo_bot" },
   });
 }

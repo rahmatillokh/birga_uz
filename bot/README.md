@@ -6,7 +6,7 @@ Bot foydalanuvchi ma’lumotlarini hech qachon to‘g‘ridan-to‘g‘ri bazaga
 
 ## 1. BotFather sozlamalari
 
-1. Telegram’da [@BotFather](https://t.me/BotFather) → `/newbot` → bot nomi va username (masalan `YuniQoBot`) → **tokenni** oling.
+1. Telegram’da [@BotFather](https://t.me/BotFather) → `/newbot` → bot nomi va username (masalan `YuniQo_bot`) → **tokenni** oling.
 2. (Ixtiyoriy) `/setuserpic` — logotip. Buyruqlar ro‘yxati, bot tavsifi va Mini App menyu tugmasini bot ishga tushganda **o‘zi o‘rnatadi**.
 3. **Mini App menyu tugmasi.** `WEBAPP_URL` `https://` bilan boshlansa, bot chat pastidagi «YuniQo» tugmasini avtomatik o‘rnatadi (`setChatMenuButton`). Qo‘lda qilish (muqobil): `/mybots` → bot → *Bot Settings* → *Menu Button* → URL, yoki `/setmenubutton` buyrug‘i.
 4. **Mini App domeni.** Ilova bot ichidagi `web_app` tugmalari orqali ochiladi — domenni alohida ro‘yxatdan o‘tkazish shart emas, faqat manzil **HTTPS** bo‘lishi kerak. `t.me/<bot>/app` ko‘rinishidagi to‘g‘ridan-to‘g‘ri havola kerak bo‘lsa — `/newapp` orqali Mini App yarating (URL sifatida `WEBAPP_URL` ni kiriting).

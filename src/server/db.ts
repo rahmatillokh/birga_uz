@@ -9,7 +9,9 @@ import type { DB } from "@/lib/types";
  * Bitta Node jarayoni ichida globalThis orqali saqlanadi, o‘zgarishlar fayllarga yoziladi.
  * Keyingi bosqichda PostgreSQL bilan almashtirish oson: barcha o‘zgarishlar applyAction() orqali o‘tadi.
  */
-const FILE = process.env.YUNIQO_DB_FILE || path.join(process.cwd(), ".data", "db.json");
+// Vercel serverless’da faqat /tmp yoziladi (vaqtinchalik). Doimiy saqlash uchun API VPS’da ishlaydi (API_PROXY_URL).
+const FILE =
+  process.env.YUNIQO_DB_FILE || (process.env.VERCEL ? path.join("/tmp", "yuniqo-db.json") : path.join(process.cwd(), ".data", "db.json"));
 
 type Store = { db: DB; timer?: ReturnType<typeof setTimeout>; writable: boolean };
 const g = globalThis as unknown as { __yuniqo?: Store };

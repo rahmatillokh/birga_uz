@@ -81,7 +81,7 @@ function Admin() {
   }
 
   if (error) return <InfoNote emoji="🔒">Panelni ochib bo‘lmadi: {error}</InfoNote>;
-  const botLink = stats?.bot.username ? `https://t.me/${stats.bot.username}` : "https://t.me/YuniQoBot";
+  const botLink = stats?.bot.username ? `https://t.me/${stats.bot.username}` : "https://t.me/YuniQo_bot";
 
   return (
     <div className="animate-fade-up">
@@ -89,7 +89,7 @@ function Admin() {
       <div className="grid gap-5 lg:grid-cols-4">
         <Card className="flex flex-col items-center p-5 text-center">
           <QRCodeSVG value={botLink} size={170} fgColor="#0f172a" level="M" />
-          <div className="mt-3 text-lg font-black text-ink">{stats?.bot.username ? `@${stats.bot.username}` : "@YuniQoBot"}</div>
+          <div className="mt-3 text-lg font-black text-ink">{stats?.bot.username ? `@${stats.bot.username}` : "@YuniQo_bot"}</div>
           <div className="text-sm text-muted">Skanerlang va /start bosing</div>
           {!stats?.bot.connected && <div className="mt-2 text-xs font-bold text-danger">Bot tokeni o‘rnatilmagan</div>}
         </Card>

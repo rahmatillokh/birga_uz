@@ -52,7 +52,7 @@ const CHAT: { from: "bot" | "user"; text: string; buttons?: string[] }[] = [
 
 export default function BotPage() {
   const bot = useApp((s) => s.bot);
-  const username = bot.username ?? "YuniQoBot";
+  const username = bot.username ?? "YuniQo_bot";
   const link = `https://t.me/${username}`;
   return (
     <div className="animate-fade-up">

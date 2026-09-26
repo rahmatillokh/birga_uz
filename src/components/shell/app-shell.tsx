@@ -40,6 +40,23 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(t);
   }, [init]);
 
+  // Botda yoki boshqa qurilmada qilingan o‘zgarishlar: oynaga qaytilganda yangilash
+  const refresh = useApp((s) => s.refresh);
+  useEffect(() => {
+    let last = Date.now();
+    const onBack = () => {
+      if (document.visibilityState !== "visible" || Date.now() - last < 4000) return;
+      last = Date.now();
+      void refresh();
+    };
+    document.addEventListener("visibilitychange", onBack);
+    window.addEventListener("focus", onBack);
+    return () => {
+      document.removeEventListener("visibilitychange", onBack);
+      window.removeEventListener("focus", onBack);
+    };
+  }, [refresh]);
+
   // Telegram "Orqaga" tugmasi
   useEffect(() => {
     const w = tg();
@@ -170,6 +187,8 @@ function NavLink({ href, label, emoji, active, showLock }: { href: string; label
 export function RoleSwitch({ className }: { className?: string }) {
   const role = useApp((s) => s.role);
   const setRole = useApp((s) => s.setRole);
+  const refresh = useApp((s) => s.refresh);
+  const loadSpecialist = useApp((s) => s.loadSpecialist);
   const router = useRouter();
   const pathname = usePathname();
   const specialistMode = role === "specialist" || isSpecialistPath(pathname);
@@ -188,6 +207,9 @@ export function RoleSwitch({ className }: { className?: string }) {
             onClick={() => {
               haptic("select");
               setRole(o.v);
+              // rol almashganda eng so‘nggi ma’lumotlar (mutaxassis topshirig‘i ota-onada darhol ko‘rinsin)
+              if (o.v === "parent") void refresh();
+              else void loadSpecialist();
               router.push(o.href);
             }}
             className={cn(
@@ -377,7 +399,12 @@ function SpecialistBottomNav() {
             <Link
               key={it.href}
               href={it.href}
-              onClick={() => it.href === "/" && setRole("parent")}
+              onClick={() => {
+                if (it.href === "/") {
+                  setRole("parent");
+                  void useApp.getState().refresh();
+                }
+              }}
               className="flex flex-col items-center gap-0.5"
             >
               <span className={cn("grid h-8 w-12 place-items-center rounded-2xl text-xl", active && "bg-brand-50")}>{it.emoji}</span>

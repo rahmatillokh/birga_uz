@@ -1005,7 +1005,7 @@ Yetarli uyqu diqqat, xotira, kayfiyat va xulq-atvorga bevosita ta’sir qiladi. 
 
 ## Mashg‘ulotlarni odatga aylantirish
 
-Mutaxassis tavsiya qilgan mashqlar bir martalik uzoq mashg‘ulotdan ko‘ra har kuni qisqa vaqt bajarilganda yaxshiroq natija beradi. Ularni kundalik vaziyatlarga bog‘lang: nonushtadan keyin artikulyatsion gimnastika, sayr paytida muvozanat o‘yinlari. YuniQo ilovasi va @YuniQoBot Telegram boti siz tanlagan vaqtda bugungi mashqlarni eslatib turadi.
+Mutaxassis tavsiya qilgan mashqlar bir martalik uzoq mashg‘ulotdan ko‘ra har kuni qisqa vaqt bajarilganda yaxshiroq natija beradi. Ularni kundalik vaziyatlarga bog‘lang: nonushtadan keyin artikulyatsion gimnastika, sayr paytida muvozanat o‘yinlari. YuniQo ilovasi va @YuniQo_bot Telegram boti siz tanlagan vaqtda bugungi mashqlarni eslatib turadi.
 
 ## Qachon mutaxassisga murojaat qilish kerak
 

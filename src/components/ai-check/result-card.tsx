@@ -52,6 +52,7 @@ export function ResultCard({
   const head = resultTitle(stars);
   const lvl = scoreLevel(s.accuracy);
   const hold = s.mode === "hold";
+  const empty = s.totalUnits === 0 && s.holdSec < 1;
   const maxErr = Math.max(1, ...s.errors.map((e) => e.count));
 
   return (
@@ -80,8 +81,8 @@ export function ResultCard({
         <StatTile
           label="Aniqlik"
           emoji="🎯"
-          value={<span style={{ color: lvl.color }}>{s.accuracy}%</span>}
-          hint={`${lvl.icon} ${lvl.label}`}
+          value={empty ? "—" : <span style={{ color: lvl.color }}>{s.accuracy}%</span>}
+          hint={empty ? "hali baholanmadi" : `${lvl.icon} ${lvl.label}`}
         />
         <StatTile label="Vaqt" emoji="🕒" value={formatClock(s.durationSec)} hint="daqiqa:soniya" />
         {s.stability !== undefined ? (
@@ -98,7 +99,11 @@ export function ResultCard({
 
       <div className="px-4 sm:px-5">
         <h3 className="mb-2 text-[15px] font-extrabold text-ink">Ko‘p uchragan xatolar</h3>
-        {s.errors.length === 0 ? (
+        {s.errors.length === 0 && empty ? (
+          <div className="flex items-start gap-2 rounded-2xl bg-brand-50 p-3.5 text-[15px] font-semibold text-ink-2 ring-1 ring-brand-100">
+            <span>📷</span> Harakat aniqlanmadi. Kameraga to‘liq ko‘rinib turing va mashqni qayta boshlang.
+          </div>
+        ) : s.errors.length === 0 ? (
           <div className="flex items-center gap-2 rounded-2xl bg-good/10 p-3.5 text-[15px] font-bold text-[#006300]">
             <span>✅</span> Xatolar topilmadi — zo‘r!
           </div>

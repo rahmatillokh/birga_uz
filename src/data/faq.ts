@@ -10,13 +10,13 @@ export const FAQ: FaqItem[] = [
   },
   {
     category: "umumiy",
-    q: "@YuniQoBot Telegram boti nima uchun kerak?",
-    a: "@YuniQoBot YuniQo imkoniyatlariga Telegram orqali tezkor kirishni ta’minlaydi. Bot bugungi mashqlar va qayta baholash haqida eslatib turadi, bepul tuman sessiyalariga yozilishga yordam beradi. Eslatmalar vaqti va kunlarini o‘zingizga qulay qilib sozlashingiz mumkin.",
+    q: "@YuniQo_bot Telegram boti nima uchun kerak?",
+    a: "@YuniQo_bot YuniQo imkoniyatlariga Telegram orqali tezkor kirishni ta’minlaydi. Bot bugungi mashqlar va qayta baholash haqida eslatib turadi, bepul tuman sessiyalariga yozilishga yordam beradi. Eslatmalar vaqti va kunlarini o‘zingizga qulay qilib sozlashingiz mumkin.",
   },
   {
     category: "umumiy",
     q: "Bepul tuman sessiyalari nima?",
-    a: "Bu O‘zbekistonning har bir tumanida o‘tkaziladigan bepul uchrashuvlar: mutaxassislar bilan dastlabki konsultatsiya, ota-onalar uchun seminarlar, bolalar uchun amaliy mashg‘ulotlar va mutaxassislar bilan uchrashuvlar. Hududingizdagi yaqin sessiyalarni ilovada ko‘rib, joy band qilishingiz yoki @YuniQoBot orqali yozilishingiz mumkin.",
+    a: "Bu O‘zbekistonning har bir tumanida o‘tkaziladigan bepul uchrashuvlar: mutaxassislar bilan dastlabki konsultatsiya, ota-onalar uchun seminarlar, bolalar uchun amaliy mashg‘ulotlar va mutaxassislar bilan uchrashuvlar. Hududingizdagi yaqin sessiyalarni ilovada ko‘rib, joy band qilishingiz yoki @YuniQo_bot orqali yozilishingiz mumkin.",
   },
 
   // Baholash

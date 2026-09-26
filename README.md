@@ -38,7 +38,7 @@ npm run start:all           # web + bot
 | O‘zgaruvchi | Vazifasi |
 |---|---|
 | `TELEGRAM_BOT_TOKEN` | @BotFather bergan token. Bo‘lmasa bot ishga tushmaydi, web demo rejimda ishlaydi |
-| `TELEGRAM_BOT_USERNAME` | Bot username (ilovadagi “Botni ochish” tugmasi uchun) |
+| `TELEGRAM_BOT_USERNAME` | `YuniQo_bot` (ilovadagi QR va “Botni ochish” tugmasi uchun) |
 | `WEBAPP_URL` | Ilovaning **HTTPS** manzili (Mini App uchun majburiy): `https://yuniqo.uz` yoki tunnel manzili |
 | `API_URL` | Bot → web API manzili (odatda `http://localhost:3000`) |
 | `ANTHROPIC_API_KEY` | Claude API kaliti — AI yordamchi, AI xulosa va AI reja haqiqiy AI bilan ishlaydi |
@@ -47,6 +47,7 @@ npm run start:all           # web + bot
 | `COMMUNITY_URL` | Ota-onalar Telegram guruhi havolasi |
 | `BOT_API_SECRET` | Bot ↔ API maxfiy kaliti (ixtiyoriy) |
 | `ADMIN_KEY` | Ko‘rgazma paneli (`/admin?key=...`) himoyasi |
+| `API_PROXY_URL` | Faqat Vercel’da: VPS’dagi API manzili (`/api/*` proksi) |
 
 ### Telegram Mini App’ni ulash (5 daqiqa)
 
@@ -138,6 +139,32 @@ bot/                   Telegram bot (grammY)
 Demo ma’lumotlarni qaytarish: **Xavfsizlik → Ko‘rgazma boshqaruvi → “Demo ma’lumotlarni tiklash”** (haqiqiy Telegram foydalanuvchilari ma’lumotlari saqlanadi). Ko‘rgazmadan oldin hammasini noldan boshlash: `curl -X POST "http://localhost:3000/api/demo/reset?all=1&key=ADMIN_KEY"`.
 
 ---
+
+## Deploy: VPS — https://yuniqo.aysapps.uz
+
+Hammasi (web ilova + API + JSON-baza + Telegram bot **[@YuniQo_bot](https://t.me/YuniQo_bot)**) bitta VPS’da, `yuniqo` foydalanuvchisi ostida (edu360/marketpos/avtolingo bilan bir serverda, lekin alohida):
+
+```
+Brauzer / Telegram Mini App ──HTTPS──► nginx (yuniqo.aysapps.uz) ──► 127.0.0.1:8030  yuniqo-web (next start)
+Telegram ◄──long polling──► yuniqo-bot (grammY) ──► 127.0.0.1:8030/api/bot/*          │
+                                                        /home/yuniqo/app/.data/db.json ◄┘
+```
+
+| Qism | Qayerda |
+|---|---|
+| Kod | `/home/yuniqo/app` (foydalanuvchi `yuniqo`, SSH alias `yuniqo-vps`) |
+| Sozlamalar | `/home/yuniqo/app/.env.local` (gitga kirmaydi): `WEBAPP_URL=https://yuniqo.aysapps.uz`, `API_URL=http://127.0.0.1:8030`, `TELEGRAM_BOT_TOKEN`, `ADMIN_KEY`, `BOT_API_SECRET`, `ANTHROPIC_API_KEY` |
+| Web xizmati | `systemd` → `yuniqo-web.service` (`deploy/systemd/`), port `8030` |
+| Bot xizmati | `systemd` → `yuniqo-bot.service` — token qo‘yilgach: `sudo systemctl enable --now yuniqo-bot` |
+| nginx | `/etc/nginx/sites-available/yuniqo.aysapps.uz.conf` (`deploy/nginx/`), gzip + AI oqimi uchun buferlashsiz |
+| SSL | DNS `yuniqo` **A → 169.58.147.237** qo‘shilgach: `sudo certbot --nginx -d yuniqo.aysapps.uz --redirect` |
+| Ma’lumotlar | `/home/yuniqo/app/.data/db.json` — zaxira nusxasini oling |
+
+**Yangilash** (lokal kompyuterdan, bitta buyruq): `bash deploy/deploy.sh` — kodni rsync qiladi, serverda `npm ci && npm run build`, xizmatlarni qayta ishga tushiradi.
+
+Loglar: `sudo journalctl -u yuniqo-web -f`, `sudo journalctl -u yuniqo-bot -f`.
+
+> Ixtiyoriy: frontendni boshqa joyga (masalan, Vercel) chiqarsangiz, u yerda `API_PROXY_URL=https://yuniqo.aysapps.uz` o‘rnating — barcha `/api/*` so‘rovlari VPS’ga proksi qilinadi.
 
 ## Docker bilan
 

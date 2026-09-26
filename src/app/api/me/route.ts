@@ -14,6 +14,6 @@ export async function GET(req: Request) {
     mode: id.mode,
     view,
     ai: !!process.env.ANTHROPIC_API_KEY,
-    bot: { username: process.env.TELEGRAM_BOT_USERNAME || null, connected: !!process.env.TELEGRAM_BOT_TOKEN },
+    bot: { username: process.env.TELEGRAM_BOT_USERNAME || "YuniQo_bot", connected: !!process.env.TELEGRAM_BOT_TOKEN },
   });
 }
