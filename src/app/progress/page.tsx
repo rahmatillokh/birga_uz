@@ -22,7 +22,7 @@ const KIND: Record<ActivityKind, { label: string; emoji: string }> = {
   video: { label: "Video", emoji: "🎥" },
   ai_check: { label: "AI video nazorat", emoji: "📹" },
   speech: { label: "Talaffuz", emoji: "🎙️" },
-  lesson: { label: "Ustoz AI darsi", emoji: "👩‍🏫" },
+  lesson: { label: "AI darsi", emoji: "✨" },
   assessment: { label: "Baholash", emoji: "🧠" },
   article: { label: "Maqola", emoji: "📚" },
 };

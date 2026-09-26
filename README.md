@@ -4,7 +4,7 @@ YuniQo — bolaning rivojlanishini **baholash → individual reja → AI bilan m
 
 - 🌐 **Web ilova** (Next.js 16) — asosiy mahsulot. Oddiy brauzerda ham, **Telegram Mini App** sifatida ham ishlaydi.
 - 🤖 **Telegram bot** (grammY) — tezkor yordam, sessiyalarga yozilish, eslatmalar, hisobot olish va ilovaga yo‘naltirish.
-- 🧠 **AI** — Claude (Ustoz AI, AI xulosa, AI reja), MediaPipe (kamera orqali mashqni tekshirish — qurilmaning o‘zida), Web Speech (talaffuz).
+- 🧠 **AI** — Claude (AI yordamchi, AI xulosa, AI reja), MediaPipe (kamera orqali mashqni tekshirish — qurilmaning o‘zida), Web Speech (talaffuz).
 
 Bot va web ilova **bitta ma’lumotlar bazasi va bitta API** orqali ishlaydi: botda yaratilgan bola profili ilovada darhol ko‘rinadi, ilovada qilingan yozilish esa botdan bildirishnoma bo‘lib keladi.
 
@@ -41,7 +41,7 @@ npm run start:all           # web + bot
 | `TELEGRAM_BOT_USERNAME` | Bot username (ilovadagi “Botni ochish” tugmasi uchun) |
 | `WEBAPP_URL` | Ilovaning **HTTPS** manzili (Mini App uchun majburiy): `https://yuniqo.uz` yoki tunnel manzili |
 | `API_URL` | Bot → web API manzili (odatda `http://localhost:3000`) |
-| `ANTHROPIC_API_KEY` | Claude API kaliti — Ustoz AI, AI xulosa va AI reja haqiqiy AI bilan ishlaydi |
+| `ANTHROPIC_API_KEY` | Claude API kaliti — AI yordamchi, AI xulosa va AI reja haqiqiy AI bilan ishlaydi |
 | `ANTHROPIC_MODEL` | Standart: `claude-opus-5` |
 | `ADMIN_CHAT_ID` | Qo‘llab-quvvatlash xabarlari keladigan chat |
 | `COMMUNITY_URL` | Ota-onalar Telegram guruhi havolasi |
@@ -99,7 +99,7 @@ bot/                   Telegram bot (grammY)
 | 🏠 Uy sharoitidagi mashqlar | `/exercises?tab=uy` |
 | 🗣️ Logoped · 🧩 Defektolog · 🦶 Motorika va yassi oyoqlik | `/exercises?section=…`, `/exercises/[id]` (qadam-baqadam rejim) |
 | 🎥 Rivojlantiruvchi videolar | `/videos` (YouTube + interaktiv video-dars) |
-| 🤖 AI mashqlar · 👩‍🏫 Ustoz AI | `/ustoz` (ota-onaga chat, bola bilan moslashuvchan dars, bola bilan suhbat) |
+| 🤖 AI mashqlar · ✨ AI | `/ai` (ota-onaga chat, bola bilan moslashuvchan dars, bola bilan suhbat) |
 | 📹 AI orqali mashqni video bilan tekshirish | `/ai-check` (MediaPipe: qo‘l ko‘tarish, o‘tirib-turish, muvozanat, oyoq uchida, samolyotcha, tabassum–naycha) |
 | 🗣️ Nutq/talaffuz tahlili | `/speech` (talaffuz, «Shamni o‘chir» nafas mashqi, ovoz kuchi, ko‘zgu rejimi) |
 | 🎮 Rivojlantiruvchi o‘yinlar | `/games` (9 ta o‘yin) |
@@ -127,7 +127,7 @@ bot/                   Telegram bot (grammY)
 3. **Individual reja** → *AI bilan yangilash* → mashq kartasi → *Mashqni boshlash* (qadam-baqadam) → ball va konfetti.
 4. **AI video nazorat** → *O‘tirib-turish* yoki *Tabassum — Naycha* → kamera oldida bajarib ko‘rsating (takrorlar, xatolar, aniqlik).
 5. **Talaffuz** → R tovushi → mikrofonga “Rak” deng; **Shamni o‘chir** — mikrofonga puflang.
-6. **Ustoz AI** → ota-ona savoli (“R harfini ayta olmayapti”) va **Bola bilan dars**.
+6. **AI** → ota-ona savoli (“R harfini ayta olmayapti”) va **Bola bilan dars**.
 7. **Rivojlanish pasporti** → *QR / havola yaratish* → telefon bilan QR’ni skanerlang — mutaxassis hisobotni ko‘radi → *PDF*.
 8. Yuqoridagi **Ota-ona / Mutaxassis** tugmasi → **mutaxassis kabineti**: bemorlar, qabul so‘rovini tasdiqlash, **topshiriq berish** → ota-ona rejasida darhol paydo bo‘ladi; **AI xulosa qoralamasi**; **hamkasblar** bilan ma’lumot almashish.
 9. **Bepul sessiyalar** → viloyat/tuman → yozilish. **Mutaxassislar** → profil → konsultatsiyaga yozilish.

@@ -22,7 +22,7 @@ export const NEWS: NewsItem[] = [
     id: "yuniqo-korgazmada",
     type: "tadbir",
     title: "YuniQo innovatsion loyihalar ko‘rgazmasida",
-    text: "YuniQo jamoasi Toshkentda bo‘lib o‘tadigan innovatsion loyihalar ko‘rgazmasida ishtirok etadi. Stendimizda rivojlanish baholashi, Ustoz AI va AI video nazoratni jonli sinab ko‘rish, mutaxassislarimiz bilan suhbatlashish mumkin. Barchani stendimizga taklif qilamiz!",
+    text: "YuniQo jamoasi Toshkentda bo‘lib o‘tadigan innovatsion loyihalar ko‘rgazmasida ishtirok etadi. Stendimizda rivojlanish baholashi, AI yordamchi va AI video nazoratni jonli sinab ko‘rish, mutaxassislarimiz bilan suhbatlashish mumkin. Barchani stendimizga taklif qilamiz!",
     date: "2026-10-03",
     emoji: "🏛️",
   },

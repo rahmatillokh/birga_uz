@@ -1,7 +1,7 @@
 import type { LessonQuestion, LessonTopic } from "@/lib/types";
 
 /**
- * Ustoz AI — bola bilan interaktiv dars uchun mavzular va savollar banki.
+ * AI — bola bilan interaktiv dars uchun mavzular va savollar banki.
  * Har bir mavzuda 3 daraja × 5 savol: 1 — tanish, 2 — solishtirish/sanash/turkumlash,
  * 3 — mulohaza (ortiqchasini topish, keyingisi, sabab-oqibat, qo‘shish, xavfsizlik).
  * Rang — DOMAINS[domain].color (src/lib/constants.ts).

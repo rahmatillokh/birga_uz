@@ -98,7 +98,7 @@ export default function ChildProfilePage() {
             onChange={(v) => update({ interests: v as string[] })}
             options={Array.from(new Set([...INTEREST_OPTIONS, ...child.interests])).map((i) => ({ value: i, label: i }))}
           />
-          <p className="mt-3 text-xs font-semibold text-muted">AI mashqlar va Ustoz AI qiziqishlarga moslashadi (masalan, mashinalar orqali sanash).</p>
+          <p className="mt-3 text-xs font-semibold text-muted">AI mashqlar va AI yordamchi qiziqishlarga moslashadi (masalan, mashinalar orqali sanash).</p>
         </Card>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">

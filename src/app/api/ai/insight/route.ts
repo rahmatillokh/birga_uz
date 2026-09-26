@@ -26,7 +26,7 @@ function fallbackInsight(db: DB, childId: string | undefined, kind: Kind): strin
   const acts = db.activities.filter((a) => a.childId === child.id);
   const streak = streakOf(acts).current;
   const weeks = weeklySeries(acts, 4);
-  if (!last) return `${child.name} uchun rivojlanish baholashidan o‘ting — shundan so‘ng Ustoz AI shaxsiy tavsiyalar beradi.`;
+  if (!last) return `${child.name} uchun rivojlanish baholashidan o‘ting — shundan so‘ng AI shaxsiy tavsiyalar beradi.`;
   const weakest = [...DOMAIN_ORDER].sort((a, b) => last.scores[a] - last.scores[b])[0];
   if (kind === "daily") {
     const tips: Record<string, string> = {

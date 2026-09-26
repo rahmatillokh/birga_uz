@@ -9,7 +9,7 @@ import { appBtn, btn, clip, esc, kb, mainMenu, nbtn, render, send, type Btn } fr
 
 /**
  * 17. ❓ Savol-javob: mavzular → savollar → javob.
- * Erkin matn (menyu buyrug‘i emas va jarayon faol emas) → eng mos FAQ javobi + «Ustoz AI» taklifi.
+ * Erkin matn (menyu buyrug‘i emas va jarayon faol emas) → eng mos FAQ javobi + «AI» taklifi.
  */
 
 const CATS: Record<FaqItem["category"], string> = {
@@ -46,13 +46,13 @@ export function registerFreeText(bot: Bot<BotContext>): void {
 async function openFaq(ctx: BotContext): Promise<void> {
   const lines = ["❓ <b>Savol-javob</b>", ""];
   if (!FAQ.length) {
-    lines.push("Savol-javoblar tez orada qo‘shiladi. Hozircha savolingizni shu yerga yozing yoki Ustoz AI’dan so‘rang 👩‍🏫");
+    lines.push("Savol-javoblar tez orada qo‘shiladi. Hozircha savolingizni shu yerga yozing yoki AI’dan so‘rang ✨");
   } else {
     lines.push("Mavzuni tanlang yoki savolingizni shunchaki yozib yuboring ✍️");
   }
   const cats = CAT_KEYS.map((c) => ({ c, n: FAQ.filter((f) => f.category === c).length })).filter((x) => x.n);
   const rows: Btn[][] = cats.map((x) => [btn(`${CATS[x.c]} (${x.n})`, `fq:c:${x.c}`)]);
-  rows.push([appBtn("👩‍🏫 Ustoz AI", "/ustoz"), nbtn("🆘 Operator", "m:sup")]);
+  rows.push([appBtn("✨ AI", "/ai"), nbtn("🆘 Operator", "m:sup")]);
   await render(ctx, lines.join("\n"), kb(rows));
 }
 
@@ -73,7 +73,7 @@ async function openAnswer(ctx: BotContext, idx: number): Promise<void> {
     ctx,
     `❓ <b>${esc(f.q)}</b>\n\n${esc(clip(f.a, 3500))}`,
     kb([
-      [btn("⬅️ Orqaga", `fq:c:${f.category}`), appBtn("👩‍🏫 Ustoz AI", "/ustoz")],
+      [btn("⬅️ Orqaga", `fq:c:${f.category}`), appBtn("✨ AI", "/ai")],
       [nbtn("🆘 Operatorga yozish", "m:sup")],
     ]),
   );
@@ -145,14 +145,14 @@ async function answerFreeText(ctx: BotContext, text: string): Promise<void> {
 
   const intent = INTENTS.find((i) => i.re.test(norm));
   const intentRow: Btn[] = intent ? [nbtn(intent.label, `m:${intent.key}`)] : [];
-  const ustoz = appBtn("👩‍🏫 Ustoz AI’dan so‘rash", `/ustoz?q=${encodeURIComponent(clip(text, 300))}`);
+  const askAi = appBtn("✨ AI’dan so‘rash", `/ai?q=${encodeURIComponent(clip(text, 300))}`);
   const matches = bestFaq(text);
 
   if (matches.length) {
     const f = FAQ[matches[0].idx];
     const lines = [`💡 <b>${esc(f.q)}</b>`, "", esc(clip(f.a, 3000))];
     const others = matches.slice(1, 3);
-    lines.push("", "Aniqroq javob kerakmi? <b>Ustoz AI</b> bolangiz ma’lumotlarini hisobga olib, batafsil tushuntiradi 👩‍🏫");
+    lines.push("", "Aniqroq javob kerakmi? <b>AI</b> bolangiz ma’lumotlarini hisobga olib, batafsil tushuntiradi ✨");
     if (others.length) lines.push("", "Shunga o‘xshash savollar 👇");
     await send(
       ctx,
@@ -160,7 +160,7 @@ async function answerFreeText(ctx: BotContext, text: string): Promise<void> {
       kb([
         ...others.map((m) => [btn(`❓ ${clip(FAQ[m.idx].q, 48)}`, `fq:q:${m.idx}`)]),
         intentRow,
-        [ustoz],
+        [askAi],
         [btn("❓ Barcha savollar", "fq:l"), nbtn("🆘 Operator", "m:sup")],
       ]),
     );
@@ -172,9 +172,9 @@ async function answerFreeText(ctx: BotContext, text: string): Promise<void> {
     [
       "🤔 Bu savolga tayyor javob topa olmadim.",
       "",
-      "👩‍🏫 <b>Ustoz AI</b> — YuniQo ilovasidagi sun’iy intellekt yordamchisi — bolangiz haqidagi ma’lumotlarni hisobga olib, batafsil javob beradi.",
+      "✨ <b>AI</b> — YuniQo ilovasidagi sun’iy intellekt yordamchisi — bolangiz haqidagi ma’lumotlarni hisobga olib, batafsil javob beradi.",
       "Yoki savolingizni jamoamizga yuboring — odam javob beradi 🆘",
     ].join("\n"),
-    kb([intentRow, [ustoz], [btn("❓ Savol-javob", "fq:l"), nbtn("🆘 Operatorga yozish", "m:sup")]]),
+    kb([intentRow, [askAi], [btn("❓ Savol-javob", "fq:l"), nbtn("🆘 Operatorga yozish", "m:sup")]]),
   );
 }

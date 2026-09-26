@@ -70,7 +70,7 @@ export function AiExerciseGenerator({ className }: { className?: string }) {
           <div className="min-w-0 flex-1">
             <div className="text-lg font-black text-ink">AI individual mashq</div>
             <p className="text-sm text-ink-2">
-              Ustoz AI {child?.name ?? "bola"}ning qiziqishlari ({child?.interests.slice(0, 2).join(", ") || "o‘yinchoqlar"}) va rivojlanish natijalariga moslab yangi mashq tuzadi.
+              AI {child?.name ?? "bola"}ning qiziqishlari ({child?.interests.slice(0, 2).join(", ") || "o‘yinchoqlar"}) va rivojlanish natijalariga moslab yangi mashq tuzadi.
             </p>
           </div>
         </div>

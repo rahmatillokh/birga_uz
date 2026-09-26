@@ -144,7 +144,7 @@ function Sidebar({ specialistMode }: { specialistMode: boolean }) {
       {!specialistMode && !premium && (
         <Link href="/premium" className="m-3 rounded-2xl bg-gradient-to-br from-[#8b6cff] to-[#5b3fe0] p-4 text-white">
           <div className="text-sm font-black">💎 YuniQo Premium</div>
-          <div className="mt-0.5 text-xs text-white/85">Ustoz AI, AI video nazorat va batafsil hisobotlar</div>
+          <div className="mt-0.5 text-xs text-white/85">AI yordamchi, AI video nazorat va batafsil hisobotlar</div>
         </Link>
       )}
     </aside>

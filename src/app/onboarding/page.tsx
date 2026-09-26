@@ -24,7 +24,7 @@ const SLIDES = [
   {
     emoji: "🤖",
     title: "AI bilan uyda mashq qiling",
-    text: "Ustoz AI, logoped va defektolog mashqlari, AI video nazorat va talaffuz tekshiruvi — hammasi bir joyda.",
+    text: "AI yordamchi, logoped va defektolog mashqlari, AI video nazorat va talaffuz tekshiruvi — hammasi bir joyda.",
     color: "#efeaff",
   },
   {

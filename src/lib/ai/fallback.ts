@@ -1,5 +1,5 @@
 /**
- * Oflayn "demo AI" — Claude API kaliti bo‘lmaganda ham Ustoz AI ishlashi uchun.
+ * Oflayn "demo AI" — Claude API kaliti bo‘lmaganda ham AI yordamchi ishlashi uchun.
  * Kalit so‘zlar bo‘yicha oldindan tayyorlangan, mutaxassislar tavsiyalariga asoslangan javoblar.
  */
 
@@ -183,7 +183,7 @@ export function fallbackAnswer(question: string, childName = "farzandingiz"): st
   const q = norm(question);
   for (const t of TOPICS) if (t.keys.test(q)) return t.answer(childName);
   if (/salom|assalom/i.test(q)) {
-    return `Assalomu alaykum! 👋 Men Ustoz AI — YuniQo yordamchisiman. ${childName === "farzandingiz" ? "Farzandingiz" : childName} rivojlanishi, mashqlar, nutq, diqqat, motorika yoki kundalik tartib haqida savol bering — bajonidil yordam beraman.`;
+    return `Assalomu alaykum! 👋 Men — YuniQo AI yordamchisiman. ${childName === "farzandingiz" ? "Farzandingiz" : childName} rivojlanishi, mashqlar, nutq, diqqat, motorika yoki kundalik tartib haqida savol bering — bajonidil yordam beraman.`;
   }
   if (/reja|bugun|nima qil/i.test(q)) {
     return `Bugungi mashg‘ulot uchun taklif (${childName}, ~20 daqiqa):
@@ -203,7 +203,7 @@ export function fallbackKidAnswer(message: string, childName = "do‘stim"): str
   const m = norm(message);
   if (/mushuk|kuchuk|hayvon|sher|it\b/.test(m)) return `Voy, qanday ajoyib! 🐱 Mushuk «miyov» deydi, kuchuk esa «vov-vov». ${childName}, sher qanday bo‘kiradi? Qani, birga bo‘kiramiz: «R-r-r-r!» 🦁`;
   if (/rang|qizil|ko‘k|sariq/.test(m)) return `Ranglar juda chiroyli! 🌈 Olma qizil 🍎, osmon ko‘k 💙, quyosh sariq ☀️. ${childName}, sening sevimli ranging qaysi?`;
-  if (/salom|assalom/.test(m)) return `Salom, ${childName}! 👋 Men Ustoz AI. Bugun birga o‘ynaymizmi? Hayvonlar, ranglar yoki sanash — qaysi birini tanlaysan? 😊`;
+  if (/salom|assalom/.test(m)) return `Salom, ${childName}! 👋 Men — AI do‘stingman. Bugun birga o‘ynaymizmi? Hayvonlar, ranglar yoki sanash — qaysi birini tanlaysan? 😊`;
   if (/\d|sana/.test(m)) return `Keling, sanaymiz! 🍎🍎🍎 Bu yerda nechta olma bor? Barmoqchalaring bilan sanab ko‘r! ✋`;
   return `Zo‘r aytding, ${childName}! 🌟 Sen juda aqllisan. Keling, o‘yin o‘ynaymiz: men hayvon aytaman, sen uning ovozini chiqarasan. Sigir! 🐄 U qanday deydi?`;
 }

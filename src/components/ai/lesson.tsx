@@ -28,7 +28,7 @@ function speak(text: string) {
   window.speechSynthesis.speak(u);
 }
 
-/** Ustoz AI — bola bilan moslashuvchan interaktiv dars */
+/** AI — bola bilan moslashuvchan interaktiv dars */
 export function KidLesson() {
   const child = useActiveChild();
   const { activities } = useChildData();
@@ -57,10 +57,10 @@ export function KidLesson() {
   return (
     <div>
       <div className="mb-4 flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff7e6] to-white p-4 ring-1 ring-[#fde7b0]">
-        <span className="text-5xl animate-float">👩‍🏫</span>
+        <span className="text-5xl animate-float">🤖</span>
         <div>
           <div className="text-lg font-black text-ink">Salom, {child?.name ?? "do‘stim"}! Bugun nimani o‘rganamiz?</div>
-          <div className="text-sm text-ink-2">Ustoz AI savollarni sening darajangga moslab beradi. Ota-ona savolni ovoz chiqarib o‘qib bersin.</div>
+          <div className="text-sm text-ink-2">AI savollarni sening darajangga moslab beradi. Ota-ona savolni ovoz chiqarib o‘qib bersin.</div>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -177,7 +177,7 @@ function LessonRun({ topic, onExit, hasVoice, startLevel }: { topic: LessonTopic
         childId: child.id,
         kind: "lesson",
         refId: topic.id,
-        title: `Ustoz AI darsi: ${topic.title}`,
+        title: `AI darsi: ${topic.title}`,
         domain: topic.domain,
         score,
         durationSec: Math.round((Date.now() - startedAt.current) / 1000),
@@ -260,7 +260,7 @@ function LessonRun({ topic, onExit, hasVoice, startLevel }: { topic: LessonTopic
 
       <div className="rounded-[32px] border border-line bg-white p-5 text-center shadow-card sm:p-7" key={q.id}>
         <div className="flex items-start gap-3 text-left">
-          <span className="text-5xl">👩‍🏫</span>
+          <span className="text-5xl">🤖</span>
           <div className="relative flex-1 rounded-3xl rounded-tl-md px-4 py-3" style={{ background: DOMAINS[topic.domain].soft }}>
             <div className="text-xl font-black leading-snug text-ink sm:text-2xl">{q.prompt}</div>
             {hasVoice && (

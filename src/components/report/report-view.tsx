@@ -229,7 +229,7 @@ export function ReportView({
             {[
               ["🎯", "Mashqlar", byKind("exercise").length],
               ["🎮", "O‘yinlar", byKind("game").length],
-              ["👩‍🏫", "AI darslar", byKind("lesson").length],
+              ["✨", "AI darslar", byKind("lesson").length],
               ["🎥", "Videolar", byKind("video").length],
               ["📚", "Maqolalar", byKind("article").length],
             ].map(([e, l, v]) => (

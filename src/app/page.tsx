@@ -25,7 +25,7 @@ const MODULES: { href: string; emoji: string; label: string; color: string }[] =
   { href: "/plan", emoji: "🎯", label: "Individual reja", color: "#e3f6ef" },
   { href: "/exercises?tab=uy", emoji: "🏠", label: "Uy mashqlari", color: "#fdf3dc" },
   { href: "/videos", emoji: "🎥", label: "Videolar", color: "#fcecf2" },
-  { href: "/ustoz", emoji: "👩‍🏫", label: "Ustoz AI", color: "#efeaff" },
+  { href: "/ai", emoji: "✨", label: "AI", color: "#efeaff" },
   { href: "/ai-check", emoji: "📹", label: "AI video nazorat", color: "#e0f2fe" },
   { href: "/exercises?section=logoped", emoji: "🗣️", label: "Logoped", color: "#e7f0fb" },
   { href: "/exercises?section=defektolog", emoji: "🧩", label: "Defektolog", color: "#fdeee7" },
@@ -49,7 +49,7 @@ const MODULES: { href: string; emoji: string; label: string; color: string }[] =
 const FLOW = [
   { emoji: "🧠", label: "Bahola", href: "/assessment" },
   { emoji: "🎯", label: "Reja tuz", href: "/plan" },
-  { emoji: "🤖", label: "AI bilan mashq qil", href: "/ustoz" },
+  { emoji: "🤖", label: "AI bilan mashq qil", href: "/ai" },
   { emoji: "📹", label: "Video orqali tekshir", href: "/ai-check" },
   { emoji: "📊", label: "Natijani yig‘", href: "/progress" },
   { emoji: "👨‍⚕️", label: "Mutaxassisga ko‘rsat", href: "/passport" },

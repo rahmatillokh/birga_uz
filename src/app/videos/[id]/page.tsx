@@ -114,7 +114,7 @@ function VideoView({ video }: { video: Video }) {
             <div className="w-full max-w-sm shadow-pop">
               <LockedOverlay
                 title="Premium video-dars"
-                text="Bu dars YuniQo Premium obunachilari uchun. Premium bilan barcha video-darslar, AI video nazorat va Ustoz AI cheksiz ochiladi."
+                text="Bu dars YuniQo Premium obunachilari uchun. Premium bilan barcha video-darslar, AI video nazorat va AI yordamchi cheksiz ochiladi."
               />
             </div>
           </div>

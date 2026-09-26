@@ -77,7 +77,7 @@ cloudflared tunnel --url http://localhost:3000 # → https://xxxx-xxxx.trycloudf
 | 14 | 🎥 Videolar | Kategoriyalar — ilovadagi videolarga to‘g‘ridan-to‘g‘ri. |
 | 15 | 🛒 Market | Bolaning ehtiyojiga mos 3 ta tavsiya + Market. |
 | 16 | 💎 Premium | Bepul va Premium taqqoslash, narxlar, «🎁 7 kun bepul sinash». |
-| 17 | ❓ Savol-javob | Mavzular bo‘yicha FAQ; oddiy matnli savolga eng mos javob + «Ustoz AI» taklifi. |
+| 17 | ❓ Savol-javob | Mavzular bo‘yicha FAQ; oddiy matnli savolga eng mos javob + «AI» taklifi. |
 | 18 | 📢 Yangiliklar | Yangiliklar va tadbirlar (kelgusi tadbirlar 🗓️ bilan). |
 | 19 | 🆘 Qo‘llab-quvvatlash | Xabar admin chatga boradi, admin javobi foydalanuvchiga qaytadi. |
 

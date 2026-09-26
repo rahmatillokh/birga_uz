@@ -107,11 +107,11 @@ async function showApp(ctx: BotContext): Promise<void> {
     [
       "🚀 <b>YuniQo ilovasi</b>",
       "",
-      "Rivojlanish baholashi, individual reja, Ustoz AI, AI video nazorat, o‘yinlar, progress grafiklari va rivojlanish pasporti — barchasi bir joyda.",
+      "Rivojlanish baholashi, individual reja, AI yordamchi, AI video nazorat, o‘yinlar, progress grafiklari va rivojlanish pasporti — barchasi bir joyda.",
       "",
       "Telegram ichida ochiladi, alohida o‘rnatish shart emas ✨",
     ].join("\n"),
-    kb([[button], [appBtn("👩‍🏫 Ustoz AI", "/ustoz"), appBtn("📈 Progress", "/progress")]]),
+    kb([[button], [appBtn("✨ AI", "/ai"), appBtn("📈 Progress", "/progress")]]),
   );
 }
 

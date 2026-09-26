@@ -33,7 +33,7 @@ export const PERIODS: Record<PremiumPeriod, { label: string; per: string; price:
 /** Yillik tarifdagi tejash foizi (79 000 × 12 ga nisbatan) */
 export const YEAR_SAVING = Math.round((1 - PREMIUM_PRICES.year / (PREMIUM_PRICES.month * 12)) * 100);
 
-const UNLOCKED = ["Ustoz AI — cheksiz", "AI video nazorat", "Oyiga 1 ta bepul konsultatsiya", "Batafsil PDF hisobot"];
+const UNLOCKED = ["AI yordamchi — cheksiz", "AI video nazorat", "Oyiga 1 ta bepul konsultatsiya", "Batafsil PDF hisobot"];
 
 /**
  * Premium to‘lov oynasi (demo): usul tanlash → 1.2 s «ishlov berish» → faollashtirish.
@@ -101,8 +101,8 @@ export function PaymentSheet({ period: initial, onClose }: { period: PremiumPeri
             <Button variant="premium" size="lg" block onClick={onClose}>
               Ajoyib!
             </Button>
-            <Button variant="ghost" block href="/ustoz">
-              👩‍🏫 Ustoz AI bilan boshlash
+            <Button variant="ghost" block href="/ai">
+              ✨ AI bilan boshlash
             </Button>
           </div>
         </div>

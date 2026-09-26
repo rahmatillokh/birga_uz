@@ -326,7 +326,7 @@ export const PREMIUM_FEATURES: { title: string; emoji: string; free: boolean | s
   { title: "Rivojlantiruvchi videolar", emoji: "🎥", free: true, premium: "+ Premium videolar" },
   { title: "Ota-onalar hamjamiyati", emoji: "👨‍👩‍👧", free: true, premium: true },
   { title: "Bepul tuman sessiyalari", emoji: "🏢", free: true, premium: true },
-  { title: "Ustoz AI", emoji: "👩‍🏫", free: "Kuniga 3 savol", premium: "Cheksiz" },
+  { title: "AI yordamchi", emoji: "✨", free: "Kuniga 3 savol", premium: "Cheksiz" },
   { title: "AI video nazorat", emoji: "📹", free: false, premium: true },
   { title: "Individual rivojlanish dasturi", emoji: "📋", free: "Asosiy", premium: "AI bilan kengaytirilgan" },
   { title: "Kengaytirilgan progress va grafiklar", emoji: "📈", free: false, premium: true },

@@ -141,7 +141,7 @@ function genActivities(o: ChildSeedOpts): Activity[] {
       pushExercise(exPool[Math.floor(rnd() * exPool.length)].id, nextTime(), scoreNow());
     }
 
-    // 2) Qo‘shimcha faoliyatlar: o‘yin, video, AI tekshiruv, talaffuz, Ustoz AI darsi
+    // 2) Qo‘shimcha faoliyatlar: o‘yin, video, AI tekshiruv, talaffuz, AI darsi
     const extras = 1 + Math.floor(rnd() * 2);
     for (let j = 0; j < extras; j++) {
       const roll = rnd();
@@ -187,7 +187,7 @@ function genActivities(o: ChildSeedOpts): Activity[] {
         });
       } else if (LESSON_TOPICS.length) {
         const lt = LESSON_TOPICS[Math.floor(rnd() * LESSON_TOPICS.length)];
-        out.push({ id: id(), childId: o.child.id, at: t, kind: "lesson", refId: lt.id, title: `Ustoz AI darsi: ${lt.title}`, domain: lt.domain, score, durationSec: 240 + Math.floor(rnd() * 180), points: POINTS.lesson });
+        out.push({ id: id(), childId: o.child.id, at: t, kind: "lesson", refId: lt.id, title: `AI darsi: ${lt.title}`, domain: lt.domain, score, durationSec: 240 + Math.floor(rnd() * 180), points: POINTS.lesson });
       }
     }
   }

@@ -19,7 +19,7 @@ export const NAV_GROUPS: { title: string; items: NavItem[] }[] = [
     title: "Mashg‘ulotlar",
     items: [
       { href: "/exercises", label: "Mashqlar", emoji: "🧩" },
-      { href: "/ustoz", label: "Ustoz AI", emoji: "👩‍🏫" },
+      { href: "/ai", label: "AI", emoji: "✨" },
       { href: "/ai-check", label: "AI video nazorat", emoji: "📹", premium: true },
       { href: "/speech", label: "Nutq va talaffuz", emoji: "🗣️" },
       { href: "/games", label: "O‘yinlar", emoji: "🎮" },
@@ -67,7 +67,7 @@ export const NAV_GROUPS: { title: string; items: NavItem[] }[] = [
 export const BOTTOM_NAV: NavItem[] = [
   { href: "/", label: "Asosiy", emoji: "🏠" },
   { href: "/exercises", label: "Mashqlar", emoji: "🎯" },
-  { href: "/ustoz", label: "Ustoz AI", emoji: "👩‍🏫" },
+  { href: "/ai", label: "AI", emoji: "✨" },
   { href: "/progress", label: "Progress", emoji: "📊" },
   { href: "/cabinet", label: "Kabinet", emoji: "👤" },
 ];

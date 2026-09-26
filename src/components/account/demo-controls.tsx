@@ -89,8 +89,8 @@ export function DemoControls({ className }: { className?: string }) {
           badge={<Badge tone={aiEnabled ? "good" : "gray"}>{aiEnabled ? "● Claude AI ulangan" : "Oflayn demo AI"}</Badge>}
           text={
             aiEnabled
-              ? "Ustoz AI, baholash xulosalari va individual reja Claude orqali real vaqtda yaratiladi."
-              : "AI kaliti (ANTHROPIC_API_KEY) yo‘q — Ustoz AI va xulosalar tayyor namunalar asosida ishlaydi."
+              ? "AI yordamchi javoblari, baholash xulosalari va individual reja Claude orqali real vaqtda yaratiladi."
+              : "AI kaliti (ANTHROPIC_API_KEY) yo‘q — AI yordamchi va xulosalar tayyor namunalar asosida ishlaydi."
           }
         />
         <Row

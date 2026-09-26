@@ -27,7 +27,7 @@ export async function GET(req: Request) {
     ...db.activities
       .filter((a) => tgChildIds.has(a.childId) && a.kind !== "assessment")
       .slice(-40)
-      .map((a) => ({ at: a.at, text: `${a.kind === "ai_check" ? "📹" : a.kind === "game" ? "🎮" : a.kind === "speech" ? "🎙️" : a.kind === "lesson" ? "👩‍🏫" : "🎯"} ${a.title}` })),
+      .map((a) => ({ at: a.at, text: `${a.kind === "ai_check" ? "📹" : a.kind === "game" ? "🎮" : a.kind === "speech" ? "🎙️" : a.kind === "lesson" ? "✨" : "🎯"} ${a.title}` })),
   ]
     .sort((a, b) => b.at.localeCompare(a.at))
     .slice(0, 25);

@@ -23,7 +23,7 @@ import type { Specialist } from "@/lib/types";
 import { cn, formatMoney } from "@/lib/utils";
 
 const PERKS = [
-  { emoji: "👩‍🏫", title: "Ustoz AI — cheksiz", text: "Kuniga 3 ta savol o‘rniga cheksiz suhbat va darslar", color: "#efeaff" },
+  { emoji: "✨", title: "AI yordamchi — cheksiz", text: "Kuniga 3 ta savol o‘rniga cheksiz suhbat va darslar", color: "#efeaff" },
   { emoji: "📹", title: "AI video nazorat", text: "Mashq to‘g‘ri bajarilganini kamera orqali tekshirish", color: "#e7f0fb" },
   { emoji: "📞", title: "Bepul konsultatsiya", text: `Har oy 1 ta mutaxassis konsultatsiyasi (${formatMoney(PREMIUM_PRICES.consultation)} qiymatida)`, color: "#fcecf2" },
   { emoji: "📁", title: "PDF hisobot", text: "Mutaxassis uchun batafsil rivojlanish hisoboti", color: "#e3f6ef" },
@@ -63,7 +63,7 @@ export default function PremiumPage() {
     const ok = await confirm({
       title: "Premium’ni bekor qilasizmi?",
       emoji: "🥺",
-      text: "Cheksiz Ustoz AI, AI video nazorat va bepul konsultatsiya yopiladi. Bu demo — istalgan vaqtda qayta yoqishingiz mumkin.",
+      text: "Cheksiz AI yordamchi, AI video nazorat va bepul konsultatsiya yopiladi. Bu demo — istalgan vaqtda qayta yoqishingiz mumkin.",
       confirmLabel: "Ha, bekor qilish",
       cancelLabel: "Premium qolsin",
       tone: "danger",
@@ -91,7 +91,7 @@ export default function PremiumPage() {
           </span>
           <h2 className="mt-3 max-w-xl text-[27px] font-black leading-[1.15] sm:text-[34px]">Farzandingiz rivojlanishi uchun to‘liq imkoniyatlar</h2>
           <p className="mt-2 max-w-lg text-[15px] leading-relaxed text-white/85">
-            Cheksiz Ustoz AI, AI video nazorat, oyiga 1 ta bepul mutaxassis konsultatsiyasi va batafsil rivojlanish hisoboti.
+            Cheksiz AI yordamchi, AI video nazorat, oyiga 1 ta bepul mutaxassis konsultatsiyasi va batafsil rivojlanish hisoboti.
           </p>
 
           <div className="mt-5 max-w-md rounded-2xl bg-white/15 p-4 ring-1 ring-white/25 backdrop-blur-sm">
@@ -149,8 +149,8 @@ export default function PremiumPage() {
             )}
             {paidActive && (
               <>
-                <Button size="lg" variant="secondary" className="border-transparent text-[#5b3fe0] hover:border-transparent hover:bg-white/90" href="/ustoz">
-                  👩‍🏫 Ustoz AI’ni ochish
+                <Button size="lg" variant="secondary" className="border-transparent text-[#5b3fe0] hover:border-transparent hover:bg-white/90" href="/ai">
+                  ✨ AI’ni ochish
                 </Button>
                 <Button size="lg" variant="ghost" className="bg-white/15 text-white ring-1 ring-white/30 hover:bg-white/25" href="/ai-check">
                   📹 AI video nazorat
@@ -180,7 +180,7 @@ export default function PremiumPage() {
             emoji="🌱"
             price="0 so‘m"
             per="doimo bepul"
-            features={["Rivojlanish baholashi", "Mashqlar (cheklangan)", "Ustoz AI — kuniga 3 savol", "Bepul tuman sessiyalari", "Ota-onalar hamjamiyati"]}
+            features={["Rivojlanish baholashi", "Mashqlar (cheklangan)", "AI yordamchi — kuniga 3 savol", "Bepul tuman sessiyalari", "Ota-onalar hamjamiyati"]}
             action={
               !prem.active ? (
                 <CurrentPill />
@@ -194,7 +194,7 @@ export default function PremiumPage() {
             emoji="💎"
             price={formatMoney(PERIODS.month.price)}
             per="oyiga"
-            features={["Barcha mashqlar va premium videolar", "Ustoz AI — cheksiz", "AI video nazorat", "Oyiga 1 ta bepul konsultatsiya", "Batafsil PDF hisobot"]}
+            features={["Barcha mashqlar va premium videolar", "AI yordamchi — cheksiz", "AI video nazorat", "Oyiga 1 ta bepul konsultatsiya", "Batafsil PDF hisobot"]}
             action={
               paidActive && prem.period === "month" ? (
                 <CurrentPill premium />

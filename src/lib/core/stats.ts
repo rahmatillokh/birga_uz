@@ -178,7 +178,7 @@ export function badgesFor(activities: Activity[], assessments: Assessment[], boo
     mk("games-15", "Xotira qahramoni", "🧠", "15 ta rivojlantiruvchi o‘yin", memory, 15, "o‘yinlarni o‘ynang"),
     mk("motor-25", "Harakatchan", "🤸", "25 ta motorika mashqi", motor, 25, "motorika mashqlarini bajaring"),
     mk("ai-5", "AI do‘sti", "🤖", "5 marta AI video nazoratdan o‘tdi", ai, 5, "AI tekshiruvdan o‘ting"),
-    mk("lesson-10", "Ustozning shogirdi", "👩‍🏫", "Ustoz AI bilan 10 ta dars", lessons, 10, "Ustoz AI bilan dars qiling"),
+    mk("lesson-10", "Zukko shogird", "🎓", "AI bilan 10 ta dars", lessons, 10, "AI bilan dars qiling"),
     mk("consult", "Mutaxassis bilan", "👨‍⚕️", "Birinchi konsultatsiya", consult, 1, "konsultatsiyaga yoziling"),
     mk("session", "Jamoa bilan", "🏢", "Bepul YuniQo sessiyasiga yozildi", sessions, 1, "bepul sessiyaga yoziling"),
     mk("century", "100 ta mashg‘ulot", "💯", "Jami 100 ta faoliyat", activities.length, 100, "mashg‘ulotlarni davom ettiring"),

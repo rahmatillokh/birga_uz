@@ -29,7 +29,7 @@ function getRecognition(): SR | null {
 }
 
 /**
- * Ustoz AI chat (ota-ona / bola / mutaxassis rejimlari).
+ * AI chat (ota-ona / bola / mutaxassis rejimlari).
  * Server: /api/ai/chat — Claude (yoki kalitsiz demo). Oflayn rejimda — lokal javoblar.
  */
 export function AiChat({
@@ -60,7 +60,7 @@ export function AiChat({
   onLimit?: () => void;
   big?: boolean;
   className?: string;
-  /** masalan, botdan kelgan savol (/ustoz?q=...) */
+  /** masalan, botdan kelgan savol (/ai?q=...) */
   initialInput?: string;
 }) {
   const appMode = useApp((s) => s.mode);
@@ -284,7 +284,7 @@ function Bubble({ role, children, big }: { role: "user" | "assistant"; children:
   }
   return (
     <div className="flex items-start gap-2.5">
-      <div className={cn("grid shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-[#efeaff] to-brand-50 shadow-card", big ? "h-12 w-12 text-2xl" : "h-10 w-10 text-xl")}>👩‍🏫</div>
+      <div className={cn("grid shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-[#efeaff] to-brand-50 shadow-card", big ? "h-12 w-12 text-2xl" : "h-10 w-10 text-xl")}>🤖</div>
       <div className="max-w-[88%] rounded-3xl rounded-tl-lg border border-line bg-white px-4 py-3 shadow-card">{children}</div>
     </div>
   );

@@ -57,12 +57,12 @@ export const FAQ: FaqItem[] = [
   {
     category: "premium",
     q: "Qaysi imkoniyatlar bepul?",
-    a: "Asosiy rivojlanish baholashi, mashqlarning cheklangan to‘plami, rivojlantiruvchi videolar, ota-onalar hamjamiyati va bepul tuman sessiyalari barcha foydalanuvchilar uchun bepul. Ustoz AI yordamchisiga ham kuniga 3 tagacha savolni bepul berish mumkin.",
+    a: "Asosiy rivojlanish baholashi, mashqlarning cheklangan to‘plami, rivojlantiruvchi videolar, ota-onalar hamjamiyati va bepul tuman sessiyalari barcha foydalanuvchilar uchun bepul. AI yordamchiga ham kuniga 3 tagacha savolni bepul berish mumkin.",
   },
   {
     category: "premium",
     q: "Premium nimalarni beradi va narxi qancha?",
-    a: "Premium narxi — oyiga 79 000 so‘m yoki yiliga 690 000 so‘m; yillik obuna oylik to‘lovga qaraganda arzonroq tushadi. Premium Ustoz AI bilan cheksiz suhbat, AI video nazorat, AI yordamida tuzilgan individual rivojlanish dasturi, kengaytirilgan progress va grafiklar, har oy 1 ta bepul mutaxassis konsultatsiyasi hamda batafsil PDF rivojlanish hisobotini ochib beradi.",
+    a: "Premium narxi — oyiga 79 000 so‘m yoki yiliga 690 000 so‘m; yillik obuna oylik to‘lovga qaraganda arzonroq tushadi. Premium AI yordamchi bilan cheksiz suhbat, AI video nazorat, AI yordamida tuzilgan individual rivojlanish dasturi, kengaytirilgan progress va grafiklar, har oy 1 ta bepul mutaxassis konsultatsiyasi hamda batafsil PDF rivojlanish hisobotini ochib beradi.",
   },
   {
     category: "premium",

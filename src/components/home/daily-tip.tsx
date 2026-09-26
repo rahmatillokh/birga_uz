@@ -8,11 +8,11 @@ import { Markdown } from "@/components/ui/markdown";
 import { Skeleton } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
 
-/** Ustoz AI — kunlik tavsiya / progress tahlili (Claude yoki oflayn) */
+/** AI — kunlik tavsiya / progress tahlili (Claude yoki oflayn) */
 export function AiInsight({
   childId,
   kind = "daily",
-  title = "Ustoz AI’dan bugungi tavsiya",
+  title = "AI’dan bugungi tavsiya",
   className,
   specialistId,
 }: {
@@ -51,7 +51,7 @@ export function AiInsight({
     <div className={cn("relative overflow-hidden rounded-3xl border border-[#e4dcff] bg-gradient-to-br from-[#f6f3ff] via-white to-[#eef8ff] p-5 shadow-card print-plain", className)}>
       <div className="mb-3 flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
-          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-white text-xl shadow-card">👩‍🏫</div>
+          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-white text-xl shadow-card">🤖</div>
           <div>
             <div className="text-[15px] font-extrabold text-ink">{title}</div>
             <div className="flex items-center gap-1 text-xs font-bold text-[#6d4fe6]">

@@ -71,8 +71,8 @@ async function onSupportMessage(ctx: BotContext): Promise<void> {
     console.log(`[yordam] ${from.id} (${from.first_name ?? ""}): ${msg.text ?? msg.caption ?? "[media]"}`);
     await send(
       ctx,
-      "✅ <b>Rahmat! Xabaringiz qabul qilindi.</b>\nJamoamiz uni ko‘rib chiqadi. Tezkor javob uchun «❓ Savol-javob» bo‘limi yoki ilovadagi Ustoz AI yordam beradi.",
-      kb([[nbtn("❓ Savol-javob", "m:faq"), appBtn("👩‍🏫 Ustoz AI", "/ustoz")]]),
+      "✅ <b>Rahmat! Xabaringiz qabul qilindi.</b>\nJamoamiz uni ko‘rib chiqadi. Tezkor javob uchun «❓ Savol-javob» bo‘limi yoki ilovadagi AI yordam beradi.",
+      kb([[nbtn("❓ Savol-javob", "m:faq"), appBtn("✨ AI", "/ai")]]),
     );
     return;
   }

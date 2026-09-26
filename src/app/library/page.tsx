@@ -23,7 +23,7 @@ function isTopic(v: string | null): v is ArticleTopic {
 const MORE = [
   { href: "/videos", emoji: "🎥", title: "Rivojlantiruvchi videolar", text: "Bola bilan birga ko‘riladigan interaktiv darslar" },
   { href: "/community", emoji: "👨‍👩‍👧", title: "Ota-onalar hamjamiyati", text: "Savol bering — mutaxassislar javob beradi" },
-  { href: "/ustoz", emoji: "👩‍🏫", title: "Ustoz AI’dan so‘rang", text: "Farzandingiz haqida shaxsiy maslahat oling" },
+  { href: "/ai", emoji: "✨", title: "AI’dan so‘rang", text: "Farzandingiz haqida shaxsiy maslahat oling" },
 ];
 
 export default function LibraryPage() {

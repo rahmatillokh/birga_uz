@@ -34,7 +34,7 @@ export default function AboutPage() {
   const numbers: [string, string][] = [
     [`${EXERCISES.length}`, "uy mashqlari (logoped, defektolog, motorika)"],
     [`${QUESTIONS.length}`, "savolli rivojlanish savolnomasi (3 yosh guruhi)"],
-    [`${LESSON_QUESTIONS.length}`, "Ustoz AI dars savollari"],
+    [`${LESSON_QUESTIONS.length}`, "AI dars savollari"],
     [`${GAMES.length}`, "rivojlantiruvchi o‘yin"],
     [`${VIDEOS.length}`, "rivojlantiruvchi video"],
     [`${ARTICLES.length}`, "o‘zbek tilidagi maqola"],
@@ -144,7 +144,7 @@ export default function AboutPage() {
       <Section title="🤖 Texnologiyalar">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            ["✨", "Claude AI", "Ustoz AI, baholash xulosasi, individual reja va mashqlar, mutaxassis uchun hisobot qoralamasi"],
+            ["✨", "Claude AI", "AI yordamchi, baholash xulosasi, individual reja va mashqlar, mutaxassis uchun hisobot qoralamasi"],
             ["📹", "MediaPipe", "Kamera orqali tana va yuz harakatlarini qurilmaning o‘zida tahlil qilish — video yuborilmaydi"],
             ["🎙️", "Nutq tahlili", "Talaffuzni aniqlash, nafas va ovoz kuchi mashqlari (mikrofon)"],
             ["📱", "Telegram Mini App", "Bot + web ilova yagona hisobda, initData orqali xavfsiz kirish"],
@@ -173,7 +173,7 @@ export default function AboutPage() {
         <Section title="💰 Biznes-model">
           <Card className="space-y-3 p-5">
             {[
-              ["💎", "Premium obuna", `${formatMoney(PREMIUM_PRICES.month)}/oy yoki ${formatMoney(PREMIUM_PRICES.year)}/yil — Ustoz AI, AI video nazorat, batafsil hisobot`],
+              ["💎", "Premium obuna", `${formatMoney(PREMIUM_PRICES.month)}/oy yoki ${formatMoney(PREMIUM_PRICES.year)}/yil — AI yordamchi, AI video nazorat, batafsil hisobot`],
               ["📞", "Konsultatsiyalar", "Online/offline mutaxassis qabullari — platforma komissiyasi"],
               ["🛒", "YuniQo Market", "Rivojlantiruvchi va logopedik mahsulotlar savdosi — hamkorlardan ulush"],
               ["🏢", "B2B / B2G", "Markazlar, bog‘chalar va hududlar uchun litsenziya va bepul sessiyalar dasturi"],

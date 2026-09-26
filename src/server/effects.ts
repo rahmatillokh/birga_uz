@@ -43,7 +43,7 @@ export async function afterAction(db: DB, actor: Actor, action: Action, result: 
           await notifyUid(
             uid,
             action.trial
-              ? "💎 <b>Premium sinov davri faollashtirildi!</b>\n7 kun davomida Ustoz AI, AI video nazorat va kengaytirilgan hisobotlardan foydalaning."
+              ? "💎 <b>Premium sinov davri faollashtirildi!</b>\n7 kun davomida AI yordamchi, AI video nazorat va kengaytirilgan hisobotlardan foydalaning."
               : "💎 <b>YuniQo Premium faollashtirildi!</b>\nRahmat! Barcha imkoniyatlar ochildi.",
             [[appButton("🚀 Ilovani ochish", "/")]],
           );
